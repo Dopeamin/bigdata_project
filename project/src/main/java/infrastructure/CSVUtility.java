@@ -1,102 +1,117 @@
 package infrastructure;
-
-import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
-import domain.Person;
+import com.opencsv.exceptions.CsvException;
 import com.opencsv.CSVReader;
 public class CSVUtility {
-    public static List<Person> readCSV(String filePath) {
-        List<Person> people = new ArrayList<>();
+    public static final int COUNTRY_INDEX = 6;
+    public static final String[] HEADERS = {"rank", "personName", "age", "finalWorth", "category", "source", "country", "state", "city", "organization", "selfMade", "gender", "birthDate", "title", "philanthropyScore", "bio", "about"};
 
-        try (CSVReader br = new CSVReader(new FileReader(filePath))) {
-            String[] nextLine;
-            nextLine = br.readNext();
-            nextLine = br.readNext();
-            while ((nextLine = br.readNext()) != null) {
-                int rank = Integer.parseInt(nextLine[0]);
-                String personName = nextLine[1];
-                int age = 0;
-                if(!nextLine[2].isEmpty()) {
-                    age = Integer.parseInt(nextLine[2]);
-                }
-                double finalWorth = 0;
-                if(!nextLine[3].isEmpty()) {
-                    finalWorth = Double.parseDouble(nextLine[3]);
-                }
-                String category = nextLine[4];
-                String source = nextLine[5];
-                String country = nextLine[6];
-                String state = nextLine[7];
-                String city = nextLine[8];
-                String organization = nextLine[9];
-                boolean selfMade = Boolean.parseBoolean(nextLine[10]);
-                String gender = nextLine[11];
-                String birthDate = nextLine[12];
-                String title = nextLine[13];
-                int philanthropyScore = 0;
-                if(!nextLine[14].isEmpty()) {
-                    philanthropyScore = Integer.parseInt(nextLine[14]);
-                }
-                String bio = nextLine[15];
+    public static List<String[]> readCSV(String filePath) throws IOException, CsvException {
+            CSVReader reader = new CSVReader(new FileReader(filePath));
+            List<String[]> data = reader.readAll();
+            reader.close();
 
-                Person person = new Person(rank, personName, age, finalWorth, category, source,
-                        country, state, city, organization, selfMade, gender, birthDate, title,
-                        philanthropyScore, bio);
-
-                people.add(person);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return people;
+            return data;
     }
 
-    public static void sortPeopleByCountry(List<Person> people) {
-        people.sort(Comparator.comparing(Person::getCountry));
-    }
-
-    public static Map<String, Integer> countCommonAttributes(List<Person> people) {
-        Map<String, Integer> attributeCounts = new HashMap<>();
-
-        for (Person person : people) {
-            String[] attributes = { person.getCategory(), person.getSource(), person.getState(),
-                    person.getCity(), person.getOrganization(), person.getGender(), person.getTitle(),
-                    person.getBio() };
-
-            for (String attribute : attributes) {
-                if (!attribute.isEmpty()) {
-                    attributeCounts.put(attribute, attributeCounts.getOrDefault(attribute, 0) + 1);
+    public static void getMostCommonValues(List<String[]> data) {
+        Map<String, Map<String, Integer>> dataByField = groupDataByField(data);
+        for (String field : dataByField.keySet()) {
+            System.out.println(field + ":");
+            Map<String, Integer> valueCounts = dataByField.get(field);
+            if (valueCounts.isEmpty()) {
+                System.out.println("- No data available");
+            } else {
+                List<Map.Entry<String, Integer>> sortedValueCounts = getSortedEntries(valueCounts);
+                for (int i = 0; i < Math.min(10, sortedValueCounts.size()); i++) {
+                    Map.Entry<String, Integer> entry = sortedValueCounts.get(i);
+                    String value = entry.getKey();
+                    int count = entry.getValue();
+                    System.out.println("- " + value + " (count: " + count + ")");
                 }
             }
         }
-
-        return attributeCounts;
     }
 
-    public static void increment(Map<String, Integer> map, String key) {
-        Integer frequency = map.get(key);
-        if (frequency == null) {
-            map.put(key, 1);
-        } else {
-            map.put(key, frequency + 1);
+    public static void getMostCommonValuesByCountry(List<String[]> data) {
+        Map<String, Map<String, Map<String, Integer>>> dataByCountryAndField = groupDataByCountryAndField(data);
+        for (String country : dataByCountryAndField.keySet()) {
+            System.out.println("Country: " + country);
+            Map<String, Map<String, Integer>> dataByField = dataByCountryAndField.get(country);
+            for (String field : dataByField.keySet()) {
+                System.out.println(field + ":");
+                Map<String, Integer> valueCounts = dataByField.get(field);
+                if (valueCounts.isEmpty()) {
+                    System.out.println("- No data available");
+                } else {
+                    String mostCommonValue = "";
+                    int mostCommonValueCount = 0;
+                    for (Map.Entry<String, Integer> entry : valueCounts.entrySet()) {
+                        String value = entry.getKey();
+                        int count = entry.getValue();
+                        if (count > mostCommonValueCount) {
+                            mostCommonValue = value;
+                            mostCommonValueCount = count;
+                        }
+                    }
+                    System.out.println("- " + mostCommonValue + " (count: " + mostCommonValueCount + ")");
+                }
+            }
+            System.out.println();
         }
     }
 
-    public static String getMostCommonAttribute(Map<String, Integer> attributeFrequency) {
-        String mostCommonAttribute = null;
-        int maxFrequency = 0;
-        for (Map.Entry<String, Integer> entry : attributeFrequency.entrySet()) {
-            System.out.println(entry.getKey()+" : "+entry.getValue());
-            String attribute = entry.getKey();
-            int frequency = entry.getValue();
-            if (frequency > maxFrequency) {
-                mostCommonAttribute = attribute;
-                maxFrequency = frequency;
+    public static Map<String, Map<String, Integer>> groupDataByField(List<String[]> data) {
+        Map<String, Map<String, Integer>> dataByField = new HashMap<>();
+        for (String[] row : data) {
+            for (int i = 2; i < HEADERS.length - 2; i++) {
+                String field = HEADERS[i];
+                String value = row[i];
+                if (!dataByField.containsKey(field)) {
+                    dataByField.put(field, new HashMap<>());
+                }
+                if (!value.isEmpty()) {
+                    Map<String, Integer> valueCounts = dataByField.get(field);
+                    valueCounts.put(value, valueCounts.getOrDefault(value, 0) + 1);
+                }
             }
         }
-        return mostCommonAttribute;
+        return dataByField;
+    }
+
+    public static Map<String, Map<String, Map<String, Integer>>> groupDataByCountryAndField(List<String[]> data) {
+        Map<String, Map<String, Map<String, Integer>>> dataByCountryAndField = new HashMap<>();
+        for (String[] row : data) {
+            String country = row[COUNTRY_INDEX];
+            if (!dataByCountryAndField.containsKey(country)) {
+                dataByCountryAndField.put(country, new HashMap<>());
+            }
+            Map<String, Map<String, Integer>> dataByField = dataByCountryAndField.get(country);
+            for (int i = 2; i < HEADERS.length - 2; i++) {
+                if(i!=COUNTRY_INDEX) {
+                    System.out.println("header " + HEADERS[i] + i);
+                    String field = HEADERS[i];
+                    String value = row[i];
+                    if (!dataByField.containsKey(field)) {
+                        dataByField.put(field, new HashMap<>());
+                    }
+                    if (!value.isEmpty()) {
+                        Map<String, Integer> valueCounts = dataByField.get(field);
+                        valueCounts.put(value, valueCounts.getOrDefault(value, 0) + 1);
+                    }
+
+                }
+            }
+        }
+        return dataByCountryAndField;
+    }
+
+    public static List<Map.Entry<String, Integer>> getSortedEntries(Map<String, Integer> map) {
+        List<Map.Entry<String, Integer>> entries = new ArrayList<>(map.entrySet());
+        entries.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
+        return entries;
     }
 }
