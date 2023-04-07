@@ -1,0 +1,1875 @@
+Country:  
+finalWorth: 
+- 1700 (count: 2) 
+gender: 
+- M (count: 9) 
+philanthropyScore: 
+- No data available 
+city: 
+- No data available 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 7) 
+source: 
+- shoes (count: 2) 
+state: 
+- No data available 
+category: 
+- Manufacturing (count: 3) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1948 (count: 1) 
+age: 
+- 34 (count: 1) 
+Country: country 
+finalWorth: 
+- finalWorth (count: 1) 
+gender: 
+- gender (count: 1) 
+philanthropyScore: 
+- philanthropyScore (count: 1) 
+city: 
+- city (count: 1) 
+organization: 
+- organization (count: 1) 
+selfMade: 
+- selfMade (count: 1) 
+source: 
+- source (count: 1) 
+state: 
+- state (count: 1) 
+category: 
+- category (count: 1) 
+title: 
+- title (count: 1) 
+birthDate: 
+- birthDate (count: 1) 
+age: 
+- age (count: 1) 
+Country: Cambodia 
+finalWorth: 
+- 2600 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Phnom Penh (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- casinos, property, energy (count: 1) 
+state: 
+- No data available 
+category: 
+- Gambling & Casinos (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 7/1/1947 (count: 1) 
+age: 
+- 74 (count: 1) 
+Country: Malaysia 
+finalWorth: 
+- 1600 (count: 2) 
+gender: 
+- M (count: 15) 
+philanthropyScore: 
+- No data available 
+city: 
+- Kuala Lumpur (count: 10) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 11) 
+source: 
+- rubber gloves (count: 2) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 3) 
+title: 
+- No data available 
+birthDate: 
+- 3/14/1930 (count: 1) 
+age: 
+- 77 (count: 2) 
+Country: Kazakhstan 
+finalWorth: 
+- 3800 (count: 2) 
+gender: 
+- M (count: 6) 
+philanthropyScore: 
+- No data available 
+city: 
+- Almaty (count: 6) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 6) 
+source: 
+- fintech (count: 2) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 5) 
+title: 
+- No data available 
+birthDate: 
+- 11/13/1987 (count: 1) 
+age: 
+- 55 (count: 1) 
+Country: Portugal 
+finalWorth: 
+- 4700 (count: 1) 
+gender: 
+- F (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Grijo (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 1) 
+source: 
+- energy, investments (count: 1) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/16/1935 (count: 1) 
+age: 
+- 87 (count: 1) 
+Country: Oman 
+finalWorth: 
+- 2500 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Muscat (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- diversified (count: 1) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1939 (count: 1) 
+age: 
+- 83 (count: 1) 
+Country: Bahamas 
+finalWorth: 
+- 24000 (count: 1) 
+gender: 
+- M (count: 4) 
+philanthropyScore: 
+- 1 (count: 1) 
+city: 
+- Nassau (count: 2) 
+organization: 
+- FTX (count: 1) 
+selfMade: 
+- TRUE (count: 4) 
+source: 
+- cryptocurrency exchange (count: 2) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 3) 
+title: 
+- Founder (count: 1) 
+birthDate: 
+- 1/17/1960 (count: 1) 
+age: 
+- 28 (count: 1) 
+Country: Cayman Islands 
+finalWorth: 
+- 1500 (count: 1) 
+gender: 
+- M (count: 3) 
+philanthropyScore: 
+- No data available 
+city: 
+- Grand Cayman (count: 2) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 2) 
+source: 
+- health products (count: 1) 
+state: 
+- No data available 
+category: 
+- Media & Entertainment (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 12/13/1946 (count: 1) 
+age: 
+- 66 (count: 1) 
+Country: Greece 
+finalWorth: 
+- 1400 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Athens (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- oil and gas (count: 1) 
+state: 
+- No data available 
+category: 
+- Energy (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1933 (count: 1) 
+age: 
+- 89 (count: 1) 
+Country: Austria 
+finalWorth: 
+- 3000 (count: 2) 
+gender: 
+- M (count: 10) 
+philanthropyScore: 
+- No data available 
+city: 
+- Vienna (count: 6) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 8) 
+source: 
+- consumer goods (count: 2) 
+state: 
+- No data available 
+category: 
+- Fashion & Retail (count: 4) 
+title: 
+- No data available 
+birthDate: 
+- 5/20/1944 (count: 1) 
+age: 
+- 49 (count: 2) 
+Country: South Korea 
+finalWorth: 
+- 1100 (count: 5) 
+gender: 
+- M (count: 38) 
+philanthropyScore: 
+- 1 (count: 1) 
+city: 
+- Seoul (count: 38) 
+organization: 
+- SK Holdings (count: 2) 
+selfMade: 
+- TRUE (count: 25) 
+source: 
+- online games (count: 6) 
+state: 
+- No data available 
+category: 
+- Technology (count: 11) 
+title: 
+- Chairman (count: 2) 
+birthDate: 
+- 1/8/1953 (count: 1) 
+age: 
+- 48 (count: 3) 
+Country: Morocco 
+finalWorth: 
+- 1300 (count: 1) 
+gender: 
+- M (count: 2) 
+philanthropyScore: 
+- No data available 
+city: 
+- Casablanca (count: 2) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 2) 
+source: 
+- petroleum, diversified (count: 1) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1961 (count: 1) 
+age: 
+- 89 (count: 1) 
+Country: Monaco 
+finalWorth: 
+- 1500 (count: 2) 
+gender: 
+- M (count: 12) 
+philanthropyScore: 
+- No data available 
+city: 
+- Monaco (count: 7) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 9) 
+source: 
+- EasyJet (count: 2) 
+state: 
+- No data available 
+category: 
+- Service (count: 3) 
+title: 
+- Investor (count: 1) 
+birthDate: 
+- 5/18/1955 (count: 1) 
+age: 
+- 55 (count: 2) 
+Country: Brazil 
+finalWorth: 
+- 2000 (count: 5) 
+gender: 
+- M (count: 46) 
+philanthropyScore: 
+- No data available 
+city: 
+- Sao Paulo (count: 25) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 33) 
+source: 
+- banking (count: 7) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 13) 
+title: 
+- Entrepreneur (count: 2) 
+birthDate: 
+- 1/1/1950 (count: 2) 
+age: 
+- 72 (count: 5) 
+Country: Turks and Caicos Islands 
+finalWorth: 
+- 2200 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Turks and Caicos Islands (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- security (count: 1) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1946 (count: 1) 
+age: 
+- 76 (count: 1) 
+Country: Algeria 
+finalWorth: 
+- 5100 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Algiers (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- food (count: 1) 
+state: 
+- No data available 
+category: 
+- Food & Beverage (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1944 (count: 1) 
+age: 
+- 78 (count: 1) 
+Country: Chile 
+finalWorth: 
+- 22800 (count: 1) 
+gender: 
+- M (count: 4) 
+philanthropyScore: 
+- No data available 
+city: 
+- Santiago (count: 6) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 3) 
+source: 
+- forestry, mining (count: 2) 
+state: 
+- No data available 
+category: 
+- Metals & Mining (count: 2) 
+title: 
+- President (count: 1) 
+birthDate: 
+- 11/13/1945 (count: 1) 
+age: 
+- 79 (count: 1) 
+Country: Nepal 
+finalWorth: 
+- 1500 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Kathmandu (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 1) 
+source: 
+- diversified (count: 1) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 4/14/1955 (count: 1) 
+age: 
+- 66 (count: 1) 
+Country: Colombia 
+finalWorth: 
+- 9900 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Bogota (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- banking (count: 1) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/27/1933 (count: 1) 
+age: 
+- 89 (count: 1) 
+Country: Argentina 
+finalWorth: 
+- 1500 (count: 2) 
+gender: 
+- M (count: 6) 
+philanthropyScore: 
+- No data available 
+city: 
+- Buenos Aires (count: 6) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 4) 
+source: 
+- real estate (count: 1) 
+state: 
+- No data available 
+category: 
+- Energy (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1927 (count: 1) 
+age: 
+- 89 (count: 1) 
+Country: Hungary 
+finalWorth: 
+- 1300 (count: 1) 
+gender: 
+- M (count: 2) 
+philanthropyScore: 
+- No data available 
+city: 
+- Budapest (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 2) 
+source: 
+- diversified (count: 1) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 2) 
+title: 
+- No data available 
+birthDate: 
+- 3/20/1953 (count: 1) 
+age: 
+- 56 (count: 1) 
+Country: Japan 
+finalWorth: 
+- 1000 (count: 4) 
+gender: 
+- M (count: 35) 
+philanthropyScore: 
+- No data available 
+city: 
+- Tokyo (count: 27) 
+organization: 
+- Softbank (count: 1) 
+selfMade: 
+- TRUE (count: 31) 
+source: 
+- software (count: 3) 
+state: 
+- No data available 
+category: 
+- Fashion & Retail (count: 10) 
+title: 
+- CEO (count: 1) 
+birthDate: 
+- 1/31/1941 (count: 1) 
+age: 
+- 75 (count: 4) 
+Country: Ukraine 
+finalWorth: 
+- 1300 (count: 2) 
+gender: 
+- M (count: 6) 
+philanthropyScore: 
+- No data available 
+city: 
+- Kiev (count: 4) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 6) 
+source: 
+- banking, investments (count: 2) 
+state: 
+- No data available 
+category: 
+- Metals & Mining (count: 4) 
+title: 
+- No data available 
+birthDate: 
+- 6/3/1963 (count: 1) 
+age: 
+- 55 (count: 1) 
+Country: Tanzania 
+finalWorth: 
+- 1500 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Dar es Salaam (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 1) 
+source: 
+- diversified (count: 1) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 5/8/1975 (count: 1) 
+age: 
+- 46 (count: 1) 
+Country: Bahrain 
+finalWorth: 
+- 1500 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Manama (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 1) 
+source: 
+- fine jewelry (count: 1) 
+state: 
+- No data available 
+category: 
+- Service (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1945 (count: 1) 
+age: 
+- 77 (count: 1) 
+Country: India 
+finalWorth: 
+- 1400 (count: 13) 
+gender: 
+- M (count: 145) 
+philanthropyScore: 
+- No data available 
+city: 
+- Mumbai (count: 51) 
+organization: 
+- Wipro Limited (ADR) (count: 1) 
+selfMade: 
+- FALSE (count: 85) 
+source: 
+- pharmaceuticals (count: 23) 
+state: 
+- No data available 
+category: 
+- Healthcare (count: 32) 
+title: 
+- Chair (count: 1) 
+birthDate: 
+- 1/1/1954 (count: 2) 
+age: 
+- 69 (count: 11) 
+Country: New Zealand 
+finalWorth: 
+- 9400 (count: 1) 
+gender: 
+- M (count: 3) 
+philanthropyScore: 
+- No data available 
+city: 
+- Auckland (count: 2) 
+organization: 
+- Film (count: 1) 
+selfMade: 
+- TRUE (count: 2) 
+source: 
+- education (count: 1) 
+state: 
+- No data available 
+category: 
+- Service (count: 1) 
+title: 
+- Director (count: 1) 
+birthDate: 
+- 10/31/1961 (count: 1) 
+age: 
+- 66 (count: 1) 
+Country: Canada 
+finalWorth: 
+- 1100 (count: 7) 
+gender: 
+- M (count: 42) 
+philanthropyScore: 
+- No data available 
+city: 
+- Toronto (count: 14) 
+organization: 
+- Alimentation Couche Tard Inc. Cl A (count: 2) 
+selfMade: 
+- TRUE (count: 32) 
+source: 
+- real estate (count: 4) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 9) 
+title: 
+- Entrepreneur (count: 5) 
+birthDate: 
+- 1/1/1972 (count: 2) 
+age: 
+- 65 (count: 4) 
+Country: Turkey 
+finalWorth: 
+- 1500 (count: 6) 
+gender: 
+- M (count: 19) 
+philanthropyScore: 
+- No data available 
+city: 
+- Istanbul (count: 20) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 13) 
+source: 
+- diversified (count: 10) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 13) 
+title: 
+- No data available 
+birthDate: 
+- 8/6/1945 (count: 1) 
+age: 
+- 72 (count: 3) 
+Country: Belgium 
+finalWorth: 
+- 1200 (count: 1) 
+gender: 
+- M (count: 3) 
+philanthropyScore: 
+- No data available 
+city: 
+- Brussels (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 2) 
+source: 
+- textile, chemicals (count: 1) 
+state: 
+- No data available 
+category: 
+- Food & Beverage (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 3/29/1964 (count: 1) 
+age: 
+- 57 (count: 1) 
+Country: Taiwan 
+finalWorth: 
+- 1600 (count: 4) 
+gender: 
+- M (count: 39) 
+philanthropyScore: 
+- No data available 
+city: 
+- Taipei (count: 29) 
+organization: 
+- Hon Hai Precision (count: 1) 
+selfMade: 
+- TRUE (count: 24) 
+source: 
+- finance (count: 8) 
+state: 
+- No data available 
+category: 
+- Technology (count: 11) 
+title: 
+- Entrepreneur (count: 2) 
+birthDate: 
+- 1/1/1941 (count: 2) 
+age: 
+- 72 (count: 5) 
+Country: Finland 
+finalWorth: 
+- 1500 (count: 2) 
+gender: 
+- M (count: 6) 
+philanthropyScore: 
+- No data available 
+city: 
+- Helsinki (count: 6) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 5) 
+source: 
+- elevators, escalators (count: 4) 
+state: 
+- No data available 
+category: 
+- Manufacturing (count: 4) 
+title: 
+- No data available 
+birthDate: 
+- 1/19/1946 (count: 1) 
+age: 
+- 55 (count: 1) 
+Country: Italy 
+finalWorth: 
+- 1500 (count: 6) 
+gender: 
+- M (count: 34) 
+philanthropyScore: 
+- No data available 
+city: 
+- Milan (count: 21) 
+organization: 
+- Prada (count: 1) 
+selfMade: 
+- FALSE (count: 26) 
+source: 
+- luxury goods (count: 9) 
+state: 
+- No data available 
+category: 
+- Fashion & Retail (count: 21) 
+title: 
+- Entrepreneur (count: 3) 
+birthDate: 
+- 9/29/1936 (count: 1) 
+age: 
+- 76 (count: 5) 
+Country: South Africa 
+finalWorth: 
+- 1800 (count: 1) 
+gender: 
+- M (count: 5) 
+philanthropyScore: 
+- No data available 
+city: 
+- Cape Town (count: 2) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 3) 
+source: 
+- diamonds (count: 1) 
+state: 
+- No data available 
+category: 
+- Metals & Mining (count: 2) 
+title: 
+- No data available 
+birthDate: 
+- 6/1/1950 (count: 1) 
+age: 
+- 69 (count: 1) 
+Country: Bermuda 
+finalWorth: 
+- 3500 (count: 1) 
+gender: 
+- F (count: 2) 
+philanthropyScore: 
+- No data available 
+city: 
+- No data available 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 2) 
+source: 
+- beer (count: 2) 
+state: 
+- No data available 
+category: 
+- Food & Beverage (count: 2) 
+title: 
+- No data available 
+birthDate: 
+- 12/26/1948 (count: 1) 
+age: 
+- 83 (count: 1) 
+Country: Georgia 
+finalWorth: 
+- 4800 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Tbilisi (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- investments (count: 1) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 2/18/1956 (count: 1) 
+age: 
+- 66 (count: 1) 
+Country: Peru 
+finalWorth: 
+- 1500 (count: 1) 
+gender: 
+- M (count: 2) 
+philanthropyScore: 
+- No data available 
+city: 
+- Lima (count: 3) 
+organization: 
+- Hochschild Mining PLC (count: 1) 
+selfMade: 
+- FALSE (count: 3) 
+source: 
+- mining, banking (count: 1) 
+state: 
+- No data available 
+category: 
+- Metals & Mining (count: 1) 
+title: 
+- Chairman (count: 1) 
+birthDate: 
+- 4/19/1924 (count: 1) 
+age: 
+- 58 (count: 1) 
+Country: Germany 
+finalWorth: 
+- 1100 (count: 9) 
+gender: 
+- M (count: 84) 
+philanthropyScore: 
+- No data available 
+city: 
+- Munich (count: 13) 
+organization: 
+- Rocket Internet (count: 1) 
+selfMade: 
+- FALSE (count: 76) 
+source: 
+- medical technology (count: 8) 
+state: 
+- No data available 
+category: 
+- Fashion & Retail (count: 23) 
+title: 
+- Entrepreneur (count: 6) 
+birthDate: 
+- 1/1/1967 (count: 3) 
+age: 
+- 55 (count: 6) 
+Country: Eswatini (Swaziland) 
+finalWorth: 
+- 5300 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Ezulwini (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- retail, real estate (count: 1) 
+state: 
+- No data available 
+category: 
+- Fashion & Retail (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/6/1932 (count: 1) 
+age: 
+- 90 (count: 1) 
+Country: Singapore 
+finalWorth: 
+- 1600 (count: 3) 
+gender: 
+- M (count: 34) 
+philanthropyScore: 
+- No data available 
+city: 
+- Singapore (count: 33) 
+organization: 
+- Ivanhoe Mines Ltd. (count: 1) 
+selfMade: 
+- TRUE (count: 24) 
+source: 
+- real estate (count: 5) 
+state: 
+- No data available 
+category: 
+- Real Estate (count: 8) 
+title: 
+- Artist (count: 1) 
+birthDate: 
+- 7/11/1948 (count: 1) 
+age: 
+- 67 (count: 4) 
+Country: Hong Kong 
+finalWorth: 
+- 2800 (count: 5) 
+gender: 
+- M (count: 56) 
+philanthropyScore: 
+- No data available 
+city: 
+- Hong Kong (count: 67) 
+organization: 
+- Lens Technology (count: 1) 
+selfMade: 
+- TRUE (count: 45) 
+source: 
+- real estate (count: 23) 
+state: 
+- No data available 
+category: 
+- Real Estate (count: 25) 
+title: 
+- Founder and CEO (count: 1) 
+birthDate: 
+- 1/1/1963 (count: 2) 
+age: 
+- 70 (count: 6) 
+Country: United States 
+finalWorth: 
+- 1600 (count: 36) 
+gender: 
+- M (count: 656) 
+philanthropyScore: 
+- 1 (count: 173) 
+city: 
+- New York (count: 106) 
+organization: 
+- Gap (count: 3) 
+selfMade: 
+- TRUE (count: 550) 
+source: 
+- hedge funds (count: 37) 
+state: 
+- California (count: 186) 
+category: 
+- Finance & Investments (count: 200) 
+title: 
+- Entrepreneur (count: 37) 
+birthDate: 
+- 8/21/1981 (count: 3) 
+age: 
+- 66 (count: 26) 
+Country: Czechia 
+finalWorth: 
+- 1500 (count: 2) 
+gender: 
+- M (count: 9) 
+philanthropyScore: 
+- No data available 
+city: 
+- Prague (count: 10) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 9) 
+source: 
+- software (count: 2) 
+state: 
+- No data available 
+category: 
+- Technology (count: 4) 
+title: 
+- No data available 
+birthDate: 
+- 7/4/1967 (count: 1) 
+age: 
+- 67 (count: 1) 
+Country: Egypt 
+finalWorth: 
+- 1500 (count: 1) 
+gender: 
+- M (count: 5) 
+philanthropyScore: 
+- No data available 
+city: 
+- Cairo (count: 5) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 3) 
+source: 
+- diversified (count: 3) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 3) 
+title: 
+- No data available 
+birthDate: 
+- 1/23/1948 (count: 1) 
+age: 
+- 67 (count: 1) 
+Country: Thailand 
+finalWorth: 
+- 1700 (count: 4) 
+gender: 
+- M (count: 26) 
+philanthropyScore: 
+- No data available 
+city: 
+- Bangkok (count: 27) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 15) 
+source: 
+- diversified (count: 7) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 7) 
+title: 
+- No data available 
+birthDate: 
+- 9/11/1971 (count: 1) 
+age: 
+- 67 (count: 2) 
+Country: Russia 
+finalWorth: 
+- 1200 (count: 7) 
+gender: 
+- M (count: 64) 
+philanthropyScore: 
+- No data available 
+city: 
+- Moscow (count: 53) 
+organization: 
+- Metalloinvest (count: 1) 
+selfMade: 
+- TRUE (count: 65) 
+source: 
+- investments (count: 7) 
+state: 
+- No data available 
+category: 
+- Metals & Mining (count: 15) 
+title: 
+- Owner (count: 1) 
+birthDate: 
+- 3/27/1959 (count: 1) 
+age: 
+- 54 (count: 6) 
+Country: Sweden 
+finalWorth: 
+- 1500 (count: 5) 
+gender: 
+- M (count: 26) 
+philanthropyScore: 
+- No data available 
+city: 
+- Stockholm (count: 26) 
+organization: 
+- H&M - Hennes & Mauritz (count: 1) 
+selfMade: 
+- TRUE (count: 19) 
+source: 
+- investments (count: 7) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 8) 
+title: 
+- Entrepreneur (count: 2) 
+birthDate: 
+- 5/8/1967 (count: 2) 
+age: 
+- 40 (count: 3) 
+Country: Vietnam 
+finalWorth: 
+- 2900 (count: 1) 
+gender: 
+- M (count: 6) 
+philanthropyScore: 
+- No data available 
+city: 
+- Hanoi (count: 3) 
+organization: 
+- Sovico Holdings (count: 1) 
+selfMade: 
+- TRUE (count: 7) 
+source: 
+- consumer products, banking (count: 2) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 2) 
+title: 
+- Cofounder and Chairman (count: 1) 
+birthDate: 
+- 6/8/1970 (count: 1) 
+age: 
+- 51 (count: 2) 
+Country: Netherlands 
+finalWorth: 
+- 2900 (count: 1) 
+gender: 
+- M (count: 10) 
+philanthropyScore: 
+- No data available 
+city: 
+- Amsterdam (count: 5) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 7) 
+source: 
+- payments software (count: 2) 
+state: 
+- No data available 
+category: 
+- Technology (count: 3) 
+title: 
+- Entrepreneur (count: 3) 
+birthDate: 
+- 3/30/1944 (count: 1) 
+age: 
+- 88 (count: 1) 
+Country: China 
+finalWorth: 
+- 1100 (count: 37) 
+gender: 
+- M (count: 517) 
+philanthropyScore: 
+- No data available 
+city: 
+- Beijing (count: 83) 
+organization: 
+- DJI Technology Co. (count: 2) 
+selfMade: 
+- TRUE (count: 553) 
+source: 
+- pharmaceuticals (count: 38) 
+state: 
+- No data available 
+category: 
+- Manufacturing (count: 156) 
+title: 
+- Entrepreneur (count: 6) 
+birthDate: 
+- 1/1/1965 (count: 13) 
+age: 
+- 58 (count: 42) 
+Country: Ireland 
+finalWorth: 
+- 2800 (count: 1) 
+gender: 
+- M (count: 4) 
+philanthropyScore: 
+- No data available 
+city: 
+- Dublin (count: 3) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 3) 
+source: 
+- building materials (count: 1) 
+state: 
+- No data available 
+category: 
+- Telecom (count: 1) 
+title: 
+- Entrepreneur (count: 1) 
+birthDate: 
+- 6/23/1942 (count: 1) 
+age: 
+- 78 (count: 1) 
+Country: Qatar 
+finalWorth: 
+- 1200 (count: 1) 
+gender: 
+- M (count: 2) 
+philanthropyScore: 
+- No data available 
+city: 
+- Doha (count: 2) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- investments (count: 1) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1948 (count: 1) 
+age: 
+- 62 (count: 1) 
+Country: Andorra 
+finalWorth: 
+- 1300 (count: 1) 
+gender: 
+- F (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- No data available 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 1) 
+source: 
+- investments, art (count: 1) 
+state: 
+- No data available 
+category: 
+- Manufacturing (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 4/23/1943 (count: 1) 
+age: 
+- 78 (count: 1) 
+Country: Liechtenstein 
+finalWorth: 
+- 2300 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Vaduz (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 1) 
+source: 
+- dental materials (count: 1) 
+state: 
+- No data available 
+category: 
+- Healthcare (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 5/4/1957 (count: 1) 
+age: 
+- 64 (count: 1) 
+Country: Poland 
+finalWorth: 
+- 2900 (count: 1) 
+gender: 
+- M (count: 5) 
+philanthropyScore: 
+- No data available 
+city: 
+- Warsaw (count: 2) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 5) 
+source: 
+- TV broadcasting (count: 1) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 2) 
+title: 
+- No data available 
+birthDate: 
+- 1/1/1973 (count: 1) 
+age: 
+- 59 (count: 2) 
+Country: Slovakia 
+finalWorth: 
+- 1700 (count: 1) 
+gender: 
+- M (count: 2) 
+philanthropyScore: 
+- No data available 
+city: 
+- Bratislava (count: 2) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 2) 
+source: 
+- real estate (count: 1) 
+state: 
+- No data available 
+category: 
+- Real Estate (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 8/30/1969 (count: 1) 
+age: 
+- 52 (count: 1) 
+Country: France 
+finalWorth: 
+- 8400 (count: 3) 
+gender: 
+- M (count: 30) 
+philanthropyScore: 
+- No data available 
+city: 
+- Paris (count: 20) 
+organization: 
+- LVMH Moët Hennessy Louis Vuitton (count: 1) 
+selfMade: 
+- FALSE (count: 18) 
+source: 
+- cheese (count: 3) 
+state: 
+- No data available 
+category: 
+- Food & Beverage (count: 6) 
+title: 
+- Chairman and CEO (count: 2) 
+birthDate: 
+- 1/1/1954 (count: 2) 
+age: 
+- 68 (count: 4) 
+Country: Nigeria 
+finalWorth: 
+- 7300 (count: 1) 
+gender: 
+- M (count: 3) 
+philanthropyScore: 
+- No data available 
+city: 
+- Lagos (count: 3) 
+organization: 
+- Dangote Group (count: 1) 
+selfMade: 
+- TRUE (count: 2) 
+source: 
+- cement, sugar (count: 2) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 2) 
+title: 
+- CEO (count: 1) 
+birthDate: 
+- 4/29/1953 (count: 1) 
+age: 
+- 68 (count: 1) 
+Country: Romania 
+finalWorth: 
+- 1600 (count: 1) 
+gender: 
+- M (count: 3) 
+philanthropyScore: 
+- No data available 
+city: 
+- Bacau (count: 2) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 3) 
+source: 
+- retail (count: 2) 
+state: 
+- No data available 
+category: 
+- Fashion & Retail (count: 2) 
+title: 
+- No data available 
+birthDate: 
+- 9/23/1968 (count: 1) 
+age: 
+- 55 (count: 1) 
+Country: Uruguay 
+finalWorth: 
+- 1500 (count: 2) 
+gender: 
+- M (count: 3) 
+philanthropyScore: 
+- No data available 
+city: 
+- Montevideo (count: 2) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 2) 
+source: 
+- fintech (count: 2) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 2) 
+title: 
+- No data available 
+birthDate: 
+- 11/1/1944 (count: 1) 
+age: 
+- 77 (count: 1) 
+Country: Philippines 
+finalWorth: 
+- 1000 (count: 4) 
+gender: 
+- M (count: 15) 
+philanthropyScore: 
+- No data available 
+city: 
+- Manila (count: 17) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 10) 
+source: 
+- diversified (count: 11) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 10) 
+title: 
+- No data available 
+birthDate: 
+- 11/13/1954 (count: 1) 
+age: 
+- 69 (count: 3) 
+Country: United Kingdom 
+finalWorth: 
+- 1400 (count: 5) 
+gender: 
+- M (count: 76) 
+philanthropyScore: 
+- 2 (count: 1) 
+city: 
+- London (count: 64) 
+organization: 
+- Mo Ibrahim Foundation (count: 1) 
+selfMade: 
+- TRUE (count: 64) 
+source: 
+- chemicals (count: 3) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 20) 
+title: 
+- Investor (count: 6) 
+birthDate: 
+- 6/1/1965 (count: 2) 
+age: 
+- 69 (count: 5) 
+Country: United Arab Emirates 
+finalWorth: 
+- 2600 (count: 2) 
+gender: 
+- M (count: 10) 
+philanthropyScore: 
+- No data available 
+city: 
+- Dubai (count: 9) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 5) 
+source: 
+- retail (count: 2) 
+state: 
+- No data available 
+category: 
+- Fashion & Retail (count: 2) 
+title: 
+- Athlete (count: 1) 
+birthDate: 
+- 7/26/1949 (count: 1) 
+age: 
+- 66 (count: 1) 
+Country: Switzerland 
+finalWorth: 
+- 2800 (count: 5) 
+gender: 
+- M (count: 59) 
+philanthropyScore: 
+- No data available 
+city: 
+- Geneva (count: 10) 
+organization: 
+- Artemis Real Estate Partners (count: 1) 
+selfMade: 
+- TRUE (count: 40) 
+source: 
+- chemicals (count: 4) 
+state: 
+- No data available 
+category: 
+- Healthcare (count: 14) 
+title: 
+- President (count: 1) 
+birthDate: 
+- 11/21/1961 (count: 1) 
+age: 
+- 74 (count: 4) 
+Country: Spain 
+finalWorth: 
+- 1000 (count: 2) 
+gender: 
+- M (count: 19) 
+philanthropyScore: 
+- No data available 
+city: 
+- Madrid (count: 12) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 15) 
+source: 
+- construction (count: 4) 
+state: 
+- No data available 
+category: 
+- Fashion & Retail (count: 7) 
+title: 
+- No data available 
+birthDate: 
+- 7/30/1962 (count: 1) 
+age: 
+- 68 (count: 2) 
+Country: Lebanon 
+finalWorth: 
+- 3200 (count: 2) 
+gender: 
+- M (count: 2) 
+philanthropyScore: 
+- No data available 
+city: 
+- Beirut (count: 2) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 2) 
+source: 
+- telecom (count: 2) 
+state: 
+- No data available 
+category: 
+- Telecom (count: 2) 
+title: 
+- No data available 
+birthDate: 
+- 11/24/1955 (count: 1) 
+age: 
+- 66 (count: 1) 
+Country: Guernsey 
+finalWorth: 
+- 2500 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- St. Peter Port (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- financial services (count: 1) 
+state: 
+- No data available 
+category: 
+- Finance & Investments (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 8/30/1952 (count: 1) 
+age: 
+- 69 (count: 1) 
+Country: Norway 
+finalWorth: 
+- 1300 (count: 2) 
+gender: 
+- M (count: 8) 
+philanthropyScore: 
+- No data available 
+city: 
+- Oslo (count: 7) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 5) 
+source: 
+- investments (count: 2) 
+state: 
+- No data available 
+category: 
+- Fashion & Retail (count: 3) 
+title: 
+- No data available 
+birthDate: 
+- 7/22/1956 (count: 1) 
+age: 
+- 55 (count: 1) 
+Country: Denmark 
+finalWorth: 
+- 8200 (count: 4) 
+gender: 
+- M (count: 7) 
+philanthropyScore: 
+- No data available 
+city: 
+- Billund (count: 4) 
+organization: 
+- No data available 
+selfMade: 
+- FALSE (count: 8) 
+source: 
+- Lego (count: 4) 
+state: 
+- No data available 
+category: 
+- Manufacturing (count: 5) 
+title: 
+- No data available 
+birthDate: 
+- 5/18/1983 (count: 1) 
+age: 
+- 74 (count: 2) 
+Country: British Virgin Islands 
+finalWorth: 
+- 4700 (count: 1) 
+gender: 
+- M (count: 1) 
+philanthropyScore: 
+- No data available 
+city: 
+- Necker Island (count: 1) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 1) 
+source: 
+- Virgin (count: 1) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 1) 
+title: 
+- No data available 
+birthDate: 
+- 7/18/1950 (count: 1) 
+age: 
+- 71 (count: 1) 
+Country: Mexico 
+finalWorth: 
+- 1200 (count: 2) 
+gender: 
+- M (count: 12) 
+philanthropyScore: 
+- No data available 
+city: 
+- Mexico City (count: 12) 
+organization: 
+- América Móvil (count: 1) 
+selfMade: 
+- FALSE (count: 8) 
+source: 
+- banking, investments (count: 2) 
+state: 
+- No data available 
+category: 
+- Metals & Mining (count: 2) 
+title: 
+- Honorary Chairman (count: 1) 
+birthDate: 
+- 10/19/1955 (count: 1) 
+age: 
+- 54 (count: 2) 
+Country: Israel 
+finalWorth: 
+- 1500 (count: 3) 
+gender: 
+- M (count: 20) 
+philanthropyScore: 
+- No data available 
+city: 
+- Tel Aviv (count: 15) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 17) 
+source: 
+- software (count: 3) 
+state: 
+- No data available 
+category: 
+- Technology (count: 5) 
+title: 
+- Investor, Philanthropist (count: 1) 
+birthDate: 
+- 12/6/1944 (count: 1) 
+age: 
+- 64 (count: 3) 
+Country: Australia 
+finalWorth: 
+- 2100 (count: 5) 
+gender: 
+- M (count: 32) 
+philanthropyScore: 
+- 1 (count: 1) 
+city: 
+- Sydney (count: 16) 
+organization: 
+- Canva (count: 1) 
+selfMade: 
+- TRUE (count: 29) 
+source: 
+- software (count: 6) 
+state: 
+- No data available 
+category: 
+- Technology (count: 8) 
+title: 
+- Executive Chairman (count: 1) 
+birthDate: 
+- 9/13/1940 (count: 1) 
+age: 
+- 72 (count: 3) 
+Country: Indonesia 
+finalWorth: 
+- 1200 (count: 5) 
+gender: 
+- M (count: 26) 
+philanthropyScore: 
+- No data available 
+city: 
+- Jakarta (count: 19) 
+organization: 
+- No data available 
+selfMade: 
+- TRUE (count: 18) 
+source: 
+- diversified (count: 5) 
+state: 
+- No data available 
+category: 
+- Diversified (count: 6) 
+title: 
+- No data available 
+birthDate: 
+- 12/10/1945 (count: 1) 
+age: 
+- 72 (count: 4) 
