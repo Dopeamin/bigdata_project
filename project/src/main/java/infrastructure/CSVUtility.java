@@ -24,7 +24,7 @@ public class CSVUtility {
 
     public static void getMostCommonValues(List<String[]> data) {
 
-        FileHandler fileHandler = new FileHandler("common_values.txt");
+        FileHandler fileHandler = new FileHandler("output/common_values.txt");
         if (!fileHandler.isValid())
             return;
 
@@ -51,7 +51,7 @@ public class CSVUtility {
     }
 
     public static void getMostCommonValuesByCountry(List<String[]> data) {
-        FileHandler fileHandler = new FileHandler("common_values_by_country.txt");
+        FileHandler fileHandler = new FileHandler("output/common_values_by_country.txt");
         if (!fileHandler.isValid())
             return;
 
