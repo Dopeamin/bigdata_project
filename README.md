@@ -88,9 +88,11 @@ Then we need to compile the project jar and copy the input files into hadoop to 
   `mkdir output`
 
 - Now on a new terminal (not the container) copy the data into the container :
+
   `docker cp src/main/java/data/data.csv hadoop-master:/root/input/data.csv`
 
 - Put the input file into the HDFS (go back to the container)
+
   `hadoop fs -put input/data.csv`
 
 ### 2. Setting up kafka:
