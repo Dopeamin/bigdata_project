@@ -1,3 +1,6 @@
+package com.example;
+
+import com.google.gson.Gson;
 import java.util.*;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
