@@ -12,13 +12,16 @@
 ![Forbes billionaires 2022 csv files](https://i.imgur.com/y15xczk.png)
 
 ### 1. Data Ingestion:
-The data is first ingested into the Hadoop cluster using Hadoop's built-in File System API or Hadoop's command-line interface. The data is then stored in HDFS.
-Create a REST API using a web framework such as Flask, Django, or Express. This API should expose an endpoint to accept incoming data from HTTP requests.
-Inside the API endpoint, validate and parse the incoming data, then use a Kafka producer to publish the data to a Kafka topic.
+- The data is first ingested into the Hadoop cluster using Hadoop's built-in File System API or Hadoop's command-line interface. The data is then stored in HDFS.
+
+- Creates REST API using a java HTTP server. This API should expose an endpoint to accept incoming data from HTTP requests.
+
+- Inside the API endpoint, validate and parse the incoming data, then use a Kafka producer to publish the data to a Kafka topic.
 
 ### 2. Data Processing:
-Hadoop is used for distributed processing and storage of large data sets. In this pipeline, Hadoop MapReduce is used to read the data from HDFS, sort the data by field, and write the sorted data to MongoDB.
-Use a Spark Streaming job to subscribe to the Kafka topic and process the data in real-time.
+- Hadoop is used for distributed processing and storage of large data sets. In this pipeline, Hadoop MapReduce is used to read the data from HDFS, sort the data by field, and write the sorted data to MongoDB.
+
+- We use a Spark Streaming job to subscribe to the Kafka topic and process the data in real-time.
 
 ### 3. Data Analysis:
 Spark is used for data processing and analytics. Spark is used to read the sorted data from MongoDB, count the number of occurrences of each field, and write the output to MongoDB.
@@ -37,4 +40,4 @@ Using Kafka as middleware between Spark Streaming and the HTTP request has sever
 
 - Real-time processing: Kafka allows for real-time processing of data, which means that data can be processed as soon as it is received. This ensures that the processing is done in near real-time, which is important for applications that require real-time processing.
 
-- Overall, using Kafka as middleware between Spark Streaming and the HTTP request helps to improve the reliability, scalability, and efficiency of the system.
+Overall, using Kafka as middleware between Spark Streaming and the HTTP request helps to improve the reliability, scalability, and efficiency of the system.
