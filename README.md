@@ -103,7 +103,7 @@ First we need to start kafka in the master container :
 
 Then on a new terminal we need to create a topic :
 
-`kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic rick_people_topic`
+`kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic rich_people_topic`
 
 - Go to kafka folder and run :
 
@@ -139,7 +139,7 @@ Then on a new terminal we need to create a topic :
 
 ### 3. Running Spark:
 
-- Run the following command and kafka will be listening for any new messages on the rick_people_topic:
+- Run the following command and kafka will be listening for any new messages on the rich_people_topic:
 
   `hadoop -jar spark.jar`
 
