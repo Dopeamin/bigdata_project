@@ -54,8 +54,11 @@ Overall, using Kafka as middleware between Spark Streaming and the HTTP request 
 ### 0. Launching the container:
 
 Run these scripts (8080 will be used to receive http requests) to create the containers:
+
 `docker run -itd --net=hadoop -p 50070:50070 -p 8088:8088 -p 7077:7077 -p 16010:16010 -p 8080:8080 --name hadoop-master --hostname hadoop-master liliasfaxi/spark-hadoop:hv-2.7.2`
+
 `docker run -itd --net=hadoop -p 8040:8042 --name hadoop-slave1 --hostname hadoop-slave1 liliasfaxi/spark-hadoop:hv-2.7.2`
+
 `docker run -itd --net=hadoop -p 8041:8042 --name hadoop-slave2 --hostname hadoop-slave2 liliasfaxi/spark-hadoop:hv-2.7.2`
 
 ### 1. Setting up hadoop:
@@ -67,15 +70,21 @@ First run your hadoop containers and start the hadoop server :
 Then we need to compile the project jar and copy the input files into hadoop to do that :
 
 - Go to project and run :
+
   `mvn clean compile assembly:single`
 
 - Then copy target/project-1.0.jar into to docker container :
+
   `docker cp target/project-1.0.jar hadoop-master:/root/hadoop.jar`
 
 - We need to access to docker container and add an input folder to do :
+
   `docker exec -it hadoop-master bash`
+
   `mkdir input`
+
   `hadoop fs -mkdir input`
+
   `mkdir output`
 
 - Now on a new terminal (not the container) copy the data into the container :
@@ -95,34 +104,41 @@ Then on a new terminal we need to create a topic :
 `kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic rick_people_topic`
 
 - Go to kafka folder and run :
+
   `mvn clean compile assembly:single`
 
 - Now we need to copy the compiled jar into the container :
+
   `docker cp target/http-to-kafka-1.0-jar-with-dependencies.jar hadoop-master:/root/kafka.jar`
 
 ### 3. Setting up Spark:
 
 - Go to spark folder and run :
+
   `mvn clean compile assembly:single`
 
 - Now we need to copy the compiled jar into the container :
+
   `docker cp target/spark-1.0-jar-with-dependencies.jar hadoop-master:/root/spark.jar`
 
 ## Usage (Everything inside of the container)
 
 ### 1. Running Hadoop:
 
-- Run the following command and you will see files created in the output folder with the wanted result
+- Run the following command and you will see files created in the output folder with the wanted result:
+
   `hadoop -jar hadoop.jar input output`
 
 ### 2. Running Kafka:
 
-- Run the following command and kafka will be listening on port 8080 for any requests
+- Run the following command and kafka will be listening on port 8080 for any requests:
+
   `hadoop -jar kafka.jar`
 
 ### 3. Running Spark:
 
-- Run the following command and kafka will be listening for any new messages on the rick_people_topic
+- Run the following command and kafka will be listening for any new messages on the rick_people_topic:
+
   `hadoop -jar spark.jar`
 
 ### 4. Next Steps:
