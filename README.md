@@ -55,6 +55,10 @@ Overall, using Kafka as middleware between Spark Streaming and the HTTP request 
 
 Run these scripts (8080 will be used to receive http requests) to create the containers:
 
+`docker pull liliasfaxi/spark-hadoop:hv-2.7.2`
+
+`docker network create --driver=bridge hadoop`
+
 `docker run -itd --net=hadoop -p 50070:50070 -p 8088:8088 -p 7077:7077 -p 16010:16010 -p 8080:8080 --name hadoop-master --hostname hadoop-master liliasfaxi/spark-hadoop:hv-2.7.2`
 
 `docker run -itd --net=hadoop -p 8040:8042 --name hadoop-slave1 --hostname hadoop-slave1 liliasfaxi/spark-hadoop:hv-2.7.2`
@@ -135,16 +139,16 @@ Then on a new terminal we need to create a topic :
 
 - Run the following command and kafka will be listening on port 8080 for any requests:
 
-  `hadoop -jar kafka.jar`
+  `spark-submit --master local[2] kafka.jar`
 
 ### 3. Running Spark:
 
 - Run the following command and kafka will be listening for any new messages on the rich_people_topic:
 
-  `hadoop -jar spark.jar`
+  `spark-submit --master local --driver-memory 4g --executor-memory 2g --executor-cores 1 spark.jar`
 
 ### 4. Next Steps:
 
-- We can use the form we made to send a well formatted request to the 8080 port so it triggers the pipeline
+- We can use the form we made to send a well formatted request to the 8080 port on endpoint /ingest (http://localhost:8080/ingest) so it triggers the pipeline
 
 - Data will be visualized on our website made in NextJs
