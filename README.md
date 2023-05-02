@@ -27,9 +27,9 @@
 
 - We use a Spark Streaming job to subscribe to the Kafka topic and process the data in real-time.
 
-### 3. Data Analysis:
+### 3. Data Storage:
 
-- Spark is used for data processing and analytics. Spark is used to read the sorted data from MongoDB, count the number of occurrences of each field, and write the output to MongoDB.
+- The data processed by both the bash processing of hadoop and spark streaming will be stored on MongoDb database which will make it easy to access on request.
 
 ### 4. Data Visualization:
 
