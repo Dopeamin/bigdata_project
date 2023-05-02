@@ -9,7 +9,7 @@
 - We're interested in grouping the sum of billionaires per country and ranking them according to country.
 
 ## Architecture
-![Forbes billionaires 2022 csv files](https://imgur.com/y15xczk)
+![Forbes billionaires 2022 csv files](https://i.imgur.com/y15xczk.png)
 
 ### 1. Data Ingestion:
 The data is first ingested into the Hadoop cluster using Hadoop's built-in File System API or Hadoop's command-line interface. The data is then stored in HDFS.
