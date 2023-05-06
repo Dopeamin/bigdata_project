@@ -5,6 +5,7 @@ import com.opencsv.exceptions.CsvException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
+import org.bson.Document;
 import utils.FileHandler;
 
 public class CSVUtility {
@@ -150,5 +151,17 @@ public class CSVUtility {
     List<Map.Entry<String, Integer>> entries = new ArrayList<>(map.entrySet());
     entries.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
     return entries;
+  }
+
+  public static List<Document> storeAllData(List<String[]> data) {
+    List<Document> documents = new ArrayList<>();
+    for (String[] row : data) {
+      Document document = new Document();
+      for (int i = 0; i < CSVUtility.HEADERS.length; i++) {
+        document.append(CSVUtility.HEADERS[i], row[i]);
+      }
+      documents.add(document);
+    }
+    return documents;
   }
 }
