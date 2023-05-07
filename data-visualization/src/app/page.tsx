@@ -15,45 +15,9 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
-  Legend,
+  XAxis,
 } from "recharts";
-const data = [
-  {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-  },
-];
+import { useSocket } from "./util/useSocket";
 
 const rangeData = [
   {
@@ -100,50 +64,71 @@ const rangeData = [
   },
 ];
 
-const radarData = [
-  {
-    subject: "Math",
-    A: 120,
-    B: 110,
-    fullMark: 150,
-  },
-  {
-    subject: "Chinese",
-    A: 98,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "English",
-    A: 86,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "Geography",
-    A: 99,
-    B: 100,
-    fullMark: 150,
-  },
-  {
-    subject: "Physics",
-    A: 85,
-    B: 90,
-    fullMark: 150,
-  },
-  {
-    subject: "History",
-    A: 65,
-    B: 85,
-    fullMark: 150,
-  },
-];
-
 const axisTickStyle = {
-  fontSize: 12,
+  fontSize: 8,
+};
+
+const axisTickStyleTwo = {
+  fontSize: 8,
+  position: "absolute",
+  bottom: 0,
 };
 
 export default function Home() {
+  const { commonValues, data } = useSocket();
+
+  const radarData = commonValues?.category
+    .map((category) => {
+      return {
+        subject: category.value,
+        A: category.count,
+      };
+    })
+    .sort((a, b) => b.A - a.A)
+    .slice(0, 6);
+
+  const countries = data
+    .map((item) => item.country)
+    .filter((name, index, currentVal) => currentVal.indexOf(name) === index);
+
+  const blocksData = countries
+    .map((value) => {
+      const count = data.filter((data) => data.country === value).length;
+      return {
+        name: value,
+        count: count,
+      };
+    })
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 10);
+
+  const femaleToMale = countries
+    .map((value) => {
+      const count = data.filter((data) => data.country === value);
+      const countMale = count.filter((data) => data.gender === "M").length;
+      const countFemale = count.filter((data) => data.gender === "F").length;
+      return {
+        name: value,
+        countMale,
+        countFemale,
+      };
+    })
+    .sort((a, b) => b.countMale - a.countMale)
+    .slice(0, 10)
+    .sort((a, b) => 0.5 - Math.random());
+  //@ts-ignore
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p className="label">{`${payload[0].name} : ${payload[0].value}`}</p>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <main>
       <Header />
@@ -163,35 +148,39 @@ export default function Home() {
                 <div className="flex flex-col gap-4">
                   <div className="px-10">
                     <h3 className="text-lg text-slate-700 font-semibold">
-                      Most Common Values
+                      Male to Female Billionaires ration
                     </h3>
                     <p className="text-gray-400 text-xs font-normal">
-                      Compared to last year
+                      In the top 10 countries
                     </p>
                   </div>
                   <div className="h-32 w-full bg-gradient bg-gradient-to-t from-blue-100 to-transparent">
                     <ResponsiveContainer>
-                      <LineChart data={rangeData}>
+                      <LineChart data={femaleToMale}>
                         <Line
                           type="monotone"
-                          dataKey="pv"
+                          dataKey="countMale"
                           stroke="#8884d8"
+                          label="name"
                           strokeWidth={4}
                         />
                         <Line
                           type="monotone"
-                          dataKey="uv"
+                          dataKey="countFemale"
+                          label="name"
                           stroke="#82ca9d"
                           strokeWidth={4}
                         />
-                        <Tooltip />
+                        <XAxis dataKey={"name"} height={0} />
+
+                        <Tooltip label="name" />
                       </LineChart>
                     </ResponsiveContainer>
                   </div>
                   <div className="flex flex-row space-between px-6 py-2">
                     <div className="flex-1 min-h-40">
                       <ResponsiveContainer width={200} height={120}>
-                        <RadarChart outerRadius={40} data={radarData}>
+                        <RadarChart outerRadius={35} data={radarData}>
                           <PolarGrid />
                           <PolarAngleAxis
                             dataKey="subject"
@@ -203,7 +192,7 @@ export default function Home() {
                             tick={axisTickStyle}
                           />
                           <Radar
-                            name="Mike"
+                            name="Count"
                             dataKey="A"
                             stroke="#8884d8"
                             fill="#8884d8"
@@ -213,14 +202,13 @@ export default function Home() {
                         </RadarChart>
                       </ResponsiveContainer>
                     </div>
-                    
-                    
+
                     <div className="flex flex-1 flex-col">
                       <p className="text-gray-400 text-xs font-normal">
                         Some of the most common
                       </p>
                       <h3 className="text-2xl text-slate-700 font-semibold">
-                        World Wide Attributes
+                        World Wide Categories
                       </h3>
                       <p className="text-gray-400 text-base font-normal">
                         Of Billionaires
@@ -238,14 +226,16 @@ export default function Home() {
                       Countries with the richest people
                     </h3>
                     <p className="text-gray-400 text-xs font-normal">
-                      Total billionaires in the world <strong>3000</strong>
+                      Total billionaires considered
+                      <strong>{` ${data.length - 1}`}</strong>
                     </p>
                   </div>
                   <div className="h-40 w-full">
                     <ResponsiveContainer>
-                      <BarChart width={730} height={250} data={data}>
+                      <BarChart width={730} height={250} data={blocksData}>
                         <Tooltip />
-                        <Bar dataKey="pv" fill="#8884d8" />
+                        <XAxis dataKey="name" tick={axisTickStyle} height={0} />
+                        <Bar dataKey="count" fill="#8884d8" />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -258,7 +248,8 @@ export default function Home() {
                         United States
                       </h3>
                       <p className="text-gray-400 text-base font-normal">
-                        With <strong>2000</strong> billionaires
+                        With <strong>{blocksData[0]?.count}</strong>{" "}
+                        billionaires
                       </p>
                     </div>
                     <div className="flex flex-1 flex-col">
@@ -266,7 +257,7 @@ export default function Home() {
                         World billionaire to population ratio
                       </p>
                       <h3 className="text-2xl text-slate-700 font-semibold">
-                        1/1000000
+                        1/2857142
                       </h3>
                       <p className="text-gray-400 text-base font-normal">
                         Billionaire to each person

@@ -1,39 +1,95 @@
-import {
-  useState,
-  useEffect,
-  useCallback,
-  useMemo,
-  SetStateAction,
-} from "react";
+import { CommonValuesByCountryDTO } from "@/app/models/commonValuesByCountry.model";
+import { PersonDto } from "@/app/models/person.model";
+import { useSocket } from "@/app/util/useSocket";
+import { useMemo } from "react";
 import DataTable, { createTheme } from "react-data-table-component";
 
 const CustomDataTable = () => {
-  const [selectedRows, setSelectedRows] = useState([]);
-
-  useEffect(() => {
-    console.log("state", selectedRows);
-  }, [selectedRows]);
-
-  const handleButtonClick = () => {
-    console.log("clicked");
-  };
+  const { data, countryData } = useSocket();
 
   const columns = useMemo(
     () => [
       {
-        name: "Name",
-        selector: (row: { name: any }) => row.name,
+        name: "Rank",
+        selector: (row: PersonDto) => row.rank,
         sortable: true,
-        grow: 2,
       },
       {
-        name: "Type",
-        selector: (row: { type: any }) => row.type,
+        name: "Name",
+        selector: (row: PersonDto) => row.personName,
+        sortable: true,
+      },
+      {
+        name: "Worth",
+        selector: (row: PersonDto) => row.finalWorth,
+        sortable: true,
+      },
+      {
+        name: "Age",
+        selector: (row: PersonDto) => row.age,
+        sortable: true,
+      },
+      {
+        name: "Country",
+        selector: (row: PersonDto) => row.country,
+        sortable: true,
+      },
+      {
+        name: "gender",
+        selector: (row: PersonDto) => row.gender,
         sortable: true,
       },
     ],
     []
   );
+
+  const columnsForCountryCommonValues = [
+    {
+      name: "Country",
+      selector: (row: CommonValuesByCountryDTO) => row.country,
+      sortable: true,
+    },
+    {
+      name: "City",
+      selector: (row: CommonValuesByCountryDTO) => row.city,
+      sortable: true,
+    },
+    {
+      name: "State",
+      selector: (row: CommonValuesByCountryDTO) => row.city,
+      sortable: true,
+    },
+    {
+      name: "Self Made",
+      selector: (row: CommonValuesByCountryDTO) => row.selfMade,
+      sortable: true,
+    },
+    {
+      name: "Source",
+      selector: (row: CommonValuesByCountryDTO) => row.source,
+      sortable: true,
+    },
+    {
+      name: "Title",
+      selector: (row: CommonValuesByCountryDTO) => row.title,
+      sortable: true,
+    },
+    {
+      name: "Organization",
+      selector: (row: CommonValuesByCountryDTO) => row.organization,
+      sortable: true,
+    },
+    {
+      name: "Age",
+      selector: (row: CommonValuesByCountryDTO) => row.age,
+      sortable: true,
+    },
+    {
+      name: "Category",
+      selector: (row: CommonValuesByCountryDTO) => row.category,
+      sortable: true,
+    },
+  ];
   createTheme(
     "solarized",
     {
@@ -46,10 +102,11 @@ const CustomDataTable = () => {
       },
       pagination: {
         text: "rgb(156,163,175)",
+        button: { color: "rgb(156,163,175)" },
       },
       context: {
         background: "transparent",
-        text: "#FFFFFF",
+        text: "rgb(156,163,175)",
       },
       divider: {
         default: "#e5e7eb",
@@ -88,10 +145,10 @@ const CustomDataTable = () => {
         </h1>
         <DataTable
           customStyles={customStyle}
-          columns={columns}
+          columns={columnsForCountryCommonValues}
           theme="solarized"
           pagination
-          data={[{ name: "Amine", type: "Administrator" }]}
+          data={countryData?.slice(2)}
         />
       </div>
       <div>
@@ -104,7 +161,7 @@ const CustomDataTable = () => {
           columns={columns}
           theme="solarized"
           pagination
-          data={[{ name: "Amine", type: "Administrator" }]}
+          data={data?.slice(1)}
         />
       </div>
     </div>

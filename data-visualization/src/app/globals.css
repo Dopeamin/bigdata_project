@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#pagination-next-page svg,
+#pagination-previous-page svg,
+#pagination-first-page svg,
+#pagination-last-page svg {
+  @apply !fill-gray-300;
+}
+
+#pagination-next-page:disabled svg,
+#pagination-previous-page:disabled svg,
+#pagination-first-page:disabled svg,
+#pagination-last-page:disabled svg {
+  @apply !fill-gray-100;
+}
+
+.xAxis {
+  @apply !hidden !overflow-hidden !h-0;
+}
+.recharts-cartesian-axis-ticks {
+  @apply !hidden !overflow-hidden !h-0;
+}
