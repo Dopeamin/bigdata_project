@@ -22,8 +22,18 @@ import scala.Tuple2;
 public class DataProcessor {
 
     public static void main(String[] args) throws InterruptedException {
-        // Configure Spark
-        SparkConf conf = new SparkConf().setAppName("RichestPeopleProcessor").setMaster("local[*]");
+        SparkConf conf = new SparkConf()
+            .setAppName("RichestPeopleProcessor")
+            .setMaster("local[*]")
+            .set(
+                "spark.mongodb.output.uri",
+                "mongodb+srv://dalideco:Pcqq0HU4dTCUSSt3@bigdata.pod5mkc.mongodb.net/bigdata.common_values"
+            )
+            .set(
+                "spark.mongodb.output.uri",
+                "mongodb+srv://dalideco:Pcqq0HU4dTCUSSt3@bigdata.pod5mkc.mongodb.net/bigdata.common_values_by_country"
+            );
+
         JavaStreamingContext jssc = new JavaStreamingContext(conf, new Duration(5000));
 
         // Configure Kafka
@@ -44,65 +54,96 @@ public class DataProcessor {
         );
 
         // Process the data
-        JavaDStream<RichPersonData> richPeopleData = stream.map(record -> {
+        JavaDStream<String[]> richPeopleData = stream.map(record -> {
             // Deserialize JSON data
             Gson gson = new Gson();
-            return gson.fromJson(record.value(), RichPersonData.class);
+            return gson.fromJson(record.value(), String[].class);
         });
 
-        // Aggregate data by country
-        JavaPairDStream<String, Tuple2<Integer, Integer>> aggregatedData = richPeopleData
-            .mapToPair(
-                (PairFunction<RichPersonData, String, Tuple2<Integer, Integer>>) richPersonData ->
-                    new Tuple2<>(
-                        richPersonData.getCountry(),
-                        new Tuple2<>(1, richPersonData.getCharacteristics().length())
-                    )
-            )
-            .reduceByKey(
-                (Function2<Tuple2<Integer, Integer>, Tuple2<Integer, Integer>, Tuple2<Integer, Integer>>) (
-                        tuple1,
-                        tuple2
-                    ) ->
-                    new Tuple2<>(tuple1._1() + tuple2._1(), tuple1._2() + tuple2._2())
+        // Store data in MongoDB
+        richPeopleData.foreachRDD((JavaRDD<String[]> rdd) -> {
+            JavaRDD<Document> documentRDD = rdd.map(
+                (Function<String[], Document>) data -> {
+                    Document doc = new Document();
+                    for (int i = 0; i < CSVUtility.HEADERS.length; i++) {
+                        doc.append(CSVUtility.HEADERS[i], data[i]);
+                    }
+                    return doc;
+                }
             );
 
-        // Print the aggregated data
-        aggregatedData.print();
+            // Store data in the general_filtered_data collection
+            MongoSpark.save(documentRDD);
+
+            // Store data in the country_filtered_data collection
+            Map<String, String> writeOverrides = new HashMap<>();
+            writeOverrides.put("collection", "common_values");
+            WriteConfig countryWriteConfig = WriteConfig.create(conf).withOptions(writeOverrides);
+            MongoSpark.save(documentRDD, countryWriteConfig);
+        });
 
         // Start the Spark Streaming context and await termination
         jssc.start();
         jssc.awaitTermination();
     }
 
-    public static class RichPersonData {
+    public class RichPerson {
 
+        private Integer rank;
+        private String personName;
+        private Integer age;
+        private Double finalWorth;
+        private String category;
+        private String source;
         private String country;
-        private String name;
-        private String characteristics;
+        private String state;
+        private String city;
+        private String organization;
+        private String selfMade;
+        private String gender;
+        private String birthDate;
+        private String title;
+        private Integer philanthropyScore;
+        private String bio;
+        private String about;
 
-        public String getCountry() {
-            return country;
+        // Constructors, getters, and setters
+
+        public RichPerson() {}
+
+        // Add other constructors if needed
+
+        public Integer getRank() {
+            return rank;
         }
 
-        public void setCountry(String country) {
-            this.country = country;
+        public void setRank(Integer rank) {
+            this.rank = rank;
         }
 
-        public String getName() {
-            return name;
+        public String getPersonName() {
+            return personName;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public void setPersonName(String personName) {
+            this.personName = personName;
         }
 
-        public String getCharacteristics() {
-            return characteristics;
+        public Integer getAge() {
+            return age;
         }
 
-        public void setCharacteristics(String characteristics) {
-            this.characteristics = characteristics;
+        public void setAge(Integer age) {
+            this.age = age;
         }
+
+        public Double getFinalWorth() {
+            return finalWorth;
+        }
+
+        public void setFinalWorth(Double finalWorth) {
+            this.finalWorth = finalWorth;
+        }
+        // Add the remaining getters and setters for the other fields
     }
 }

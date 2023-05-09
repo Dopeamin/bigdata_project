@@ -116,18 +116,6 @@ export default function Home() {
     .sort((a, b) => b.countMale - a.countMale)
     .slice(0, 10)
     .sort((a, b) => 0.5 - Math.random());
-  //@ts-ignore
-  const CustomTooltip = ({ active, payload, label }) => {
-    if (active && payload && payload.length) {
-      return (
-        <div className="custom-tooltip">
-          <p className="label">{`${payload[0].name} : ${payload[0].value}`}</p>
-        </div>
-      );
-    }
-
-    return null;
-  };
 
   return (
     <main>

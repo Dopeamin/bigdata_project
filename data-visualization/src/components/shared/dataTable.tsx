@@ -161,7 +161,7 @@ const CustomDataTable = () => {
           columns={columns}
           theme="solarized"
           pagination
-          data={data?.slice(1)}
+          data={data?.slice(1).sort((a, b) => b.finalWorth - a.finalWorth)}
         />
       </div>
     </div>
