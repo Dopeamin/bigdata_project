@@ -1,0 +1,50 @@
+version: "3.9"
+services:
+  master:
+    image: hadoop_spark_kafka
+    container_name: master
+    hostname: master
+    ports:
+      - "50070:50070"
+      - "8088:8088"
+      - "9000:9000"
+      - "9092:9092"
+      - "2181:2181"
+      - "4040:4040"
+      - "7077:7077"
+      - "3002:3002"
+    environment:
+      - SLAVE_HOSTS=slave1,slave2
+    volumes:
+      - ./entrypoint-master.sh:/entrypoint.sh
+      - namenode:/usr/local/hadoop/data/hdfs/namenode
+      - datanode1:/usr/local/hadoop/data/hdfs/datanode1
+      - datanode2:/usr/local/hadoop/data/hdfs/datanode2
+      - kafka_logs:/tmp/kafka-logs
+      - zookeeper_data:/tmp/zookeeper
+    command: /entrypoint.sh
+
+  slave1:
+    image: hadoop_spark_kafka
+    container_name: slave1
+    hostname: slave1
+    volumes:
+      - ./entrypoint-slave.sh:/entrypoint.sh
+      - datanode1:/usr/local/hadoop/data/hdfs/datanode
+    command: /entrypoint.sh
+
+  slave2:
+    image: hadoop_spark_kafka
+    container_name: slave2
+    hostname: slave2
+    volumes:
+      - ./entrypoint-slave.sh:/entrypoint.sh
+      - datanode2:/usr/local/hadoop/data/hdfs/datanode
+    command: /entrypoint.sh
+
+volumes:
+  namenode:
+  datanode1:
+  datanode2:
+  kafka_logs:
+  zookeeper_data:
