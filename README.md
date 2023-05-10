@@ -1,6 +1,6 @@
 # Big Data Pipeline For Forbes Billionaires
 
-- This is a pipeline that uses many Big Data technologies to process the richest people of the world and sort them by country and get their count by country
+- This is a pipeline that uses many Big Data technologies to process the richest people of the world and sort them by country and get their count by country, It also filters their most common attributes in general and also by country
 - It was made by [Mohamed Amine Hamdouni](https://github.com/Dopeamin) and [Mohamed Ali Sahnoun](https://github.com/dalideco) and [Motez Baccouch](https://github.com/motez-baccouch).
 
 ## Data
