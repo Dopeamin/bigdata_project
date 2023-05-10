@@ -12,7 +12,18 @@
 ## Architecture
 ![Forbes billionaires 2022 csv files (3)](https://github.com/Dopeamin/bigdata_project/assets/30242595/6644c515-8247-4f35-b3e0-ecc90df0e5f1)
 
+## Folder Structure
+.
+├── backend/ 
+├── data-visualization/ (FrontEnd)
+├── hadoop_spark_kafka/ (Docker Container files)
+├── kafka/
+├── spark/
+├── project/  (Hadoop java project)
+├── README.md
+
 ## Screenshots
+
 <img width="1440" alt="Screenshot 2023-05-10 at 23 50 19" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/133d0405-38ff-4399-b373-5e5a7d9bcbdd">
 
 <img width="1438" alt="Screenshot 2023-05-10 at 23 50 29" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/02fb0140-4c13-4aea-a8f3-c5b4af855fd5">
@@ -131,3 +142,13 @@ First on a new terminal we need to create a topic :
 - We can use the form we made to send a well formatted request to the 3002 port on endpoint /ingest (http://localhost:3002/ingest) so it triggers the pipeline
 
 - Data will be visualized on our website made in NextJs
+
+### 5. Running NestJs
+
+  `cd backend && yarn start`
+
+### 5. Running NextJs
+
+  `cd data-visaluzation && yarn dev`
+
+- Then open htttp://localhost:3001/ to see the data visualization
