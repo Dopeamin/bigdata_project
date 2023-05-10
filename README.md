@@ -147,7 +147,7 @@ First on a new terminal we need to create a topic :
 
   `cd backend && yarn start`
 
-### 5. Running NextJs
+### 6. Running NextJs
 
   `cd data-visaluzation && yarn dev`
 
