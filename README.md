@@ -10,8 +10,7 @@
 - We're interested in grouping the sum of billionaires per country and ranking them according to country and specifying their most common attributes.
 
 ## Architecture
-
-![Forbes billionaires 2022 csv files](https://i.imgur.com/y15xczk.png)
+![Forbes billionaires 2022 csv files (3)](https://github.com/Dopeamin/bigdata_project/assets/30242595/5abcb06c-0f8d-4339-ad4f-a1c5fa90bc26)
 
 ### 1. Data Ingestion:
 
@@ -23,9 +22,9 @@
 
 ### 2. Data Processing:
 
-- Hadoop is used for distributed processing and storage of large data sets. In this pipeline, Hadoop MapReduce is used to read the data from HDFS, sort the data by field, and write the sorted data to MongoDB.
+- Hadoop is used for distributed processing and storage of large data sets. In this pipeline, Hadoop MapReduce is used to read the data from HDFS, sort the data by field, and write the sorted data to MongoDB (this task is a scheduled task that happens every specific interval).
 
-- We use a Spark Streaming job to subscribe to the Kafka topic and process the data in real-time.
+- We use a Spark Streaming job to subscribe to the Kafka topic and process the data in real-time and add it to our input data so hadoop can process the new data afterwards.
 
 ### 3. Data Storage:
 
@@ -53,23 +52,15 @@ Overall, using Kafka as middleware between Spark Streaming and the HTTP request 
 
 ### 0. Launching the container:
 
-Run these scripts (8080 will be used to receive http requests) to create the containers:
+Run these scripts (3002 will be used to receive http requests) to create the containers:
 
-`docker pull liliasfaxi/spark-hadoop:hv-2.7.2`
+`docker build`
 
 `docker network create --driver=bridge hadoop`
 
-`docker run -itd --net=hadoop -p 50070:50070 -p 8088:8088 -p 7077:7077 -p 16010:16010 -p 8080:8080 --name hadoop-master --hostname hadoop-master liliasfaxi/spark-hadoop:hv-2.7.2`
-
-`docker run -itd --net=hadoop -p 8040:8042 --name hadoop-slave1 --hostname hadoop-slave1 liliasfaxi/spark-hadoop:hv-2.7.2`
-
-`docker run -itd --net=hadoop -p 8041:8042 --name hadoop-slave2 --hostname hadoop-slave2 liliasfaxi/spark-hadoop:hv-2.7.2`
+`docker-compose up` 
 
 ### 1. Setting up hadoop:
-
-First run your hadoop containers and start the hadoop server :
-
-`./start-hadoop.sh`
 
 Then we need to compile the project jar and copy the input files into hadoop to do that :
 
@@ -79,33 +70,15 @@ Then we need to compile the project jar and copy the input files into hadoop to 
 
 - Then copy target/project-1.0.jar into to docker container :
 
-  `docker cp target/project-1.0.jar hadoop-master:/root/hadoop.jar`
-
-- We need to access to docker container and add an input folder to do :
-
-  `docker exec -it hadoop-master bash`
-
-  `mkdir input`
-
-  `hadoop fs -mkdir input`
-
-  `mkdir output`
+  `docker cp target/project-1.0.jar master:/usr/local/hadoop.jar`
 
 - Now on a new terminal (not the container) copy the data into the container :
 
-  `docker cp src/main/java/data/data.csv hadoop-master:/root/input/data.csv`
-
-- Put the input file into the HDFS (go back to the container)
-
-  `hadoop fs -put input/data.csv`
+  `docker cp src/main/java/data/data.csv hadoop-master:/usr/local/data.csv`
 
 ### 2. Setting up kafka:
 
-First we need to start kafka in the master container :
-
-`./start-kafka-zookeeper.sh`
-
-Then on a new terminal we need to create a topic :
+First on a new terminal we need to create a topic :
 
 `kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic rich_people_topic`
 
@@ -133,13 +106,13 @@ Then on a new terminal we need to create a topic :
 
 - Run the following command and you will see files created in the output folder with the wanted result:
 
-  `hadoop -jar hadoop.jar input output`
+  `hadoop -jar hadoop.jar data.csv`
 
 ### 2. Running Kafka:
 
-- Run the following command and kafka will be listening on port 8080 for any requests:
+- Run the following command and kafka will be listening on port 3002 for any requests:
 
-  `spark-submit --master local[2] kafka.jar`
+  `hadoop -jar kafka.jar`
 
 ### 3. Running Spark:
 
@@ -149,6 +122,6 @@ Then on a new terminal we need to create a topic :
 
 ### 4. Next Steps:
 
-- We can use the form we made to send a well formatted request to the 8080 port on endpoint /ingest (http://localhost:8080/ingest) so it triggers the pipeline
+- We can use the form we made to send a well formatted request to the 3002 port on endpoint /ingest (http://localhost:3002/ingest) so it triggers the pipeline
 
 - Data will be visualized on our website made in NextJs
