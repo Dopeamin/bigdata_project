@@ -41,6 +41,9 @@ public class Main {
     MongoCollection<Document> generalCollection = database.getCollection(
       "common_values"
     );
+    generalCollection.drop();
+    database.createCollection("common_values");
+    generalCollection = database.getCollection("common_values");
     Document generalData = new Document();
     for (String field : mostCommonValues.keySet()) {
       List<Entry<String, Integer>> values = mostCommonValues.get(field);
@@ -56,11 +59,14 @@ public class Main {
       );
     }
     generalCollection.insertOne(generalData);
-
     // Insert most common values by country data into MongoDB
     MongoCollection<Document> collection = database.getCollection(
       "common_values_by_country"
     );
+    collection.drop();
+    database.createCollection("common_values_by_country");
+    collection = database.getCollection("common_values_by_country");
+
     for (String country : mostCommonValuesByCountry.keySet()) {
       Document countryData = new Document("type", "country")
         .append("country", country);
@@ -75,6 +81,10 @@ public class Main {
     MongoCollection<Document> allDataCollection = database.getCollection(
       "all_data"
     );
+    allDataCollection.drop();
+    database.createCollection("all_data");
+    allDataCollection = database.getCollection("all_data");
+
     List<Document> allDataDocuments = CSVUtility.storeAllData(data);
     allDataCollection.insertMany(allDataDocuments);
     mongoClient.close();

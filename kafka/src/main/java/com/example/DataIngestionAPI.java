@@ -29,7 +29,7 @@ public class DataIngestionAPI {
         producer = new KafkaProducer<>(props);
 
         // Set up HTTP server
-        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(3002), 0);
         server.createContext("/ingest", new DataIngestionHandler());
         server.setExecutor(Executors.newFixedThreadPool(8));
         server.start();
