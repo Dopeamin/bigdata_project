@@ -36,7 +36,7 @@
 
 ### 4. Data Visualization:
 
-- NextJs is used to create a web interface that interacts with MongoDB to display the output of the Spark job. Django can be used to develop the backend of the web interface to interact with MongoDB and perform other tasks.
+- NextJs is used to create a web interface that interacts with MongoDB to display the output of the Spark job. NestJs can be used to develop the backend of the web interface to interact with MongoDB and perform other tasks.
 
 ### Why we use kafka as a middleware between the request and spark :
 
