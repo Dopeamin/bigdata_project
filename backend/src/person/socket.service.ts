@@ -15,10 +15,20 @@ export class SocketService {
         methods: ['GET', 'POST'],
       },
     });
+
+    this.io.on('connect', (socket) => {
+      socket.on('get', async () => {
+        const allData = await this.personService.findAll();
+        const commonValues = await this.personService.getCommonValues();
+        const commonValuesByCountry =
+          await this.personService.getCommonValuesByCountry();
+        this.io.emit('data', { allData, commonValues, commonValuesByCountry });
+      });
+    });
   }
 
   // define a cron job to emit data through the socket every minute
-  @Cron('*/60 * * * * *')
+    @Cron('*/3 * * * *')
   async handleCron() {
     const allData = await this.personService.findAll();
     const commonValues = await this.personService.getCommonValues();

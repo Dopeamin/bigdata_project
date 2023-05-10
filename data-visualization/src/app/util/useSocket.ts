@@ -11,18 +11,22 @@ export const useSocket = () => {
     CommonValuesByCountryDTO[]
   >([]);
   const [commonValues, setCommonValuesData] = useState<CommonValuesDTO>();
+  const [isLoading, setIsLoading] = useState(true);
 
   useMemo(() => {
+    setIsLoading(true);
     const socket = io("http://localhost:3004");
+    socket.emit("get");
     socket.on("data", (data) => {
       setData(data.allData);
       setCountryDataData(data.commonValuesByCountry);
       setCommonValuesData(data.commonValues[data.commonValues.length - 1]);
+      setIsLoading(false);
     });
     return () => {
       socket.disconnect();
     };
   }, []);
 
-  return { data, countryData, commonValues };
+  return { data, countryData, commonValues, isLoading };
 };
