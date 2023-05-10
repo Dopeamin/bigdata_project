@@ -13,7 +13,9 @@
 ![Forbes billionaires 2022 csv files (3)](https://github.com/Dopeamin/bigdata_project/assets/30242595/6644c515-8247-4f35-b3e0-ecc90df0e5f1)
 
 ## Screenshots
-<img width="1440" alt="Screenshot 2023-05-06 at 20 47 50" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/8c15a5da-149d-44ec-9206-b9326443f090">
+<img width="1440" alt="Screenshot 2023-05-10 at 23 50 19" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/133d0405-38ff-4399-b373-5e5a7d9bcbdd">
+
+<img width="1438" alt="Screenshot 2023-05-10 at 23 50 29" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/02fb0140-4c13-4aea-a8f3-c5b4af855fd5">
 
 
 ### 1. Data Ingestion:
