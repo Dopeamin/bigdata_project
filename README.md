@@ -18,7 +18,7 @@
 
 ### 1. Data Ingestion:
 
-- The data is first ingested into the Hadoop cluster using Hadoop's built-in File System API or Hadoop's command-line interface. The data is then stored in HDFS.
+- The data is first ingested into the Hadoop cluster using Hadoop's built-in File System API or Hadoop's command-line interface. The data is then stored in MongoDb.
 
 - Creates REST API using a java HTTP server. This API should expose an endpoint to accept incoming data from HTTP requests.
 
