@@ -10,13 +10,11 @@
 - We're interested in grouping the sum of billionaires per country and ranking them according to country and specifying their most common attributes.
 
 ## Architecture
-![Forbes billionaires 2022 csv files (3)](https://github.com/Dopeamin/bigdata_project/assets/30242595/5abcb06c-0f8d-4339-ad4f-a1c5fa90bc26)
+![Forbes billionaires 2022 csv files (3)](https://github.com/Dopeamin/bigdata_project/assets/30242595/6644c515-8247-4f35-b3e0-ecc90df0e5f1)
 
 ## Screenshots
+<img width="1440" alt="Screenshot 2023-05-06 at 20 47 50" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/8c15a5da-149d-44ec-9206-b9326443f090">
 
-<img width="1440" alt="Screenshot 2023-05-10 at 01 50 24" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/38317cb3-937c-44e7-8e52-4c75d9393526">
-
-<img width="1440" alt="Screenshot 2023-05-10 at 01 50 38" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/9ac56a56-f593-4343-ba1e-2e0c1891f00c">
 
 ### 1. Data Ingestion:
 
