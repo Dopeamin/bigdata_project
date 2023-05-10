@@ -1,3 +1,4 @@
 #!/bin/bash
+source /usr/local/setenv
 
-hadoop jar hadoop.jar data.csv
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop.jar /usr/local/data.csv
