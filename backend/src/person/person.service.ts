@@ -22,7 +22,7 @@ export class PersonService {
   ) {}
 
   async findAll(): Promise<PersonDto[]> {
-    return (await this.personModal.find().limit(1000).exec()).map((modal) =>
+    return (await this.personModal.find().exec()).map((modal) =>
       toDto(modal),
     );
   }
