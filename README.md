@@ -1,6 +1,6 @@
 # Big Data Pipeline For Forbes Billionaires
 
-- This is a pipeline that uses many Big Data technologies to process the richest people of the world and sort them by country and get their count by country
+- This is a pipeline that uses many Big Data technologies to process the richest people of the world and sort them by country and get their count by country, It also filters their most common attributes in general and also by country
 - It was made by [Mohamed Amine Hamdouni](https://github.com/Dopeamin) and [Mohamed Ali Sahnoun](https://github.com/dalideco) and [Motez Baccouch](https://github.com/motez-baccouch).
 
 ## Data
@@ -12,8 +12,21 @@
 ## Architecture
 ![Forbes billionaires 2022 csv files (3)](https://github.com/Dopeamin/bigdata_project/assets/30242595/6644c515-8247-4f35-b3e0-ecc90df0e5f1)
 
+## Folder Structure
+.
+├── backend/ 
+├── data-visualization/ (FrontEnd)
+├── hadoop_spark_kafka/ (Docker Container files)
+├── kafka/
+├── spark/
+├── project/  (Hadoop java project)
+├── README.md
+
 ## Screenshots
-<img width="1440" alt="Screenshot 2023-05-06 at 20 47 50" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/8c15a5da-149d-44ec-9206-b9326443f090">
+
+<img width="1440" alt="Screenshot 2023-05-10 at 23 50 19" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/133d0405-38ff-4399-b373-5e5a7d9bcbdd">
+
+<img width="1438" alt="Screenshot 2023-05-10 at 23 50 29" src="https://github.com/Dopeamin/bigdata_project/assets/30242595/02fb0140-4c13-4aea-a8f3-c5b4af855fd5">
 
 
 ### 1. Data Ingestion:
@@ -129,3 +142,13 @@ First on a new terminal we need to create a topic :
 - We can use the form we made to send a well formatted request to the 3002 port on endpoint /ingest (http://localhost:3002/ingest) so it triggers the pipeline
 
 - Data will be visualized on our website made in NextJs
+
+### 5. Running NestJs
+
+  `cd backend && yarn start`
+
+### 6. Running NextJs
+
+  `cd data-visaluzation && yarn dev`
+
+- Then open htttp://localhost:3001/ to see the data visualization
