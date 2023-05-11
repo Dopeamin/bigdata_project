@@ -13,14 +13,16 @@
 ![Forbes billionaires 2022 csv files (3)](https://github.com/Dopeamin/bigdata_project/assets/30242595/6644c515-8247-4f35-b3e0-ecc90df0e5f1)
 
 ## Folder Structure
+```
 .
-├── backend/ 
+├── backend/
 ├── data-visualization/ (FrontEnd)
 ├── hadoop_spark_kafka/ (Docker Container files)
 ├── kafka/
 ├── spark/
-├── project/  (Hadoop java project)
+├── project/ (Hadoop java project)
 ├── README.md
+```
 
 ## Screenshots
 
