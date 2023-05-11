@@ -18,7 +18,7 @@ import {
   PolarRadiusAxis,
   XAxis,
 } from "recharts";
-import { useSocket } from "./util/useSocket";
+import { useSocket } from "../util/useSocket";
 
 const axisTickStyle = {
   fontSize: 8,

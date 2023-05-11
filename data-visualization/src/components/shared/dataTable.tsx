@@ -1,6 +1,6 @@
-import { CommonValuesByCountryDTO } from "@/app/models/commonValuesByCountry.model";
-import { PersonDto } from "@/app/models/person.model";
-import { useSocket } from "@/app/util/useSocket";
+import { CommonValuesByCountryDTO } from "@/models/commonValuesByCountry.model";
+import { PersonDto } from "@/models/person.model";
+import { useSocket } from "@/util/useSocket";
 import { useMemo } from "react";
 import DataTable, { createTheme } from "react-data-table-component";
 

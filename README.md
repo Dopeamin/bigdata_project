@@ -92,7 +92,7 @@ First on a new terminal we need to create a topic :
 
 - Now we need to copy the compiled jar into the container :
 
-  `docker cp target/http-to-kafka-1.0-jar-with-dependencies.jar hadoop-master:/root/kafka.jar`
+  `docker cp target/http-to-kafka-1.0-jar-with-dependencies.jar hadoop-master:/usr/local/kafka.jar`
 
 ### 3. Setting up Spark:
 
@@ -102,7 +102,7 @@ First on a new terminal we need to create a topic :
 
 - Now we need to copy the compiled jar into the container :
 
-  `docker cp target/spark-1.0-jar-with-dependencies.jar hadoop-master:/root/spark.jar`
+  `docker cp target/spark-1.0-jar-with-dependencies.jar hadoop-master:/usr/local/spark.jar`
 
 ## Usage (Everything inside of the container)
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "./button";
 
 const Header = () => {
@@ -19,7 +20,9 @@ const Header = () => {
           </div>
         </div>
         <div className="flex flex-row gap-6 ">
-          <Button label={"Overview"} variant="secondary" />
+          <Link href="/">
+            <Button label={"Overview"} variant="secondary" />
+          </Link>
           <Button
             label={"Documentation"}
             onClick={() => {

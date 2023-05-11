@@ -1,6 +1,7 @@
 package com.example;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -51,8 +52,13 @@ public class DataProcessor {
         // Process the data
         JavaDStream<String> richPeopleData = stream.map(record -> {
             // Deserialize JSON data
+            System.out.println(record);
+            String jsonString = record.value().replaceAll(",\\s*}", "}");
             Gson gson = new Gson();
-            return gson.fromJson(record.value(), String.class);
+            JsonElement jsonElement = gson.fromJson(jsonString, JsonElement.class);
+
+            // Convert JsonElement to string
+            return gson.toJson(jsonElement);
         });
 
         richPeopleData.foreachRDD((JavaRDD<String> rdd) -> {
